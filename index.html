@@ -1,0 +1,1330 @@
+<!doctype html>
+<html lang="en" data-theme="velvet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Flatline Entertainment is a mobile DJ service serving Dallas Fort Worth and surrounding areas. Weddings, quinceaneras, proms, corporate events, and parties." />
+    <link rel="icon" href="data:," />
+    <title>Flatline Entertainment | Mobile DJ for Weddings, Parties &amp; Events in Dallas Fort Worth and Surrounding Areas</title>
+    <script>
+      // The page always loads in Velvet Noir (data-theme on <html>). The color
+      // preview bar stays hidden until the logo is tapped three times in a row;
+      // the script at the bottom of the page handles that and restores the last
+      // previewed scheme when the bar opens.
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Jost:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <style>
+      /* ============ COLOR SCHEMES ============ */
+      :root, [data-theme="midnight"] { /* Midnight Gold */
+        --bg: #070a12; --bg-2: #0b0f1d; --surface: #101728; --surface-2: #16203a;
+        --ink: #f5ecd7; --muted: #b3ab97; --faint: #7d7663;
+        --accent: #d9b45b; --accent-2: #f0dfae; --on-accent: #1a1405;
+        --line: rgba(217,180,91,.28); --line-soft: rgba(245,236,215,.12);
+        --hero-shade: linear-gradient(180deg, rgba(7,10,18,.55) 0%, rgba(7,10,18,.35) 40%, rgba(7,10,18,.92) 100%);
+        --glow: rgba(217,180,91,.16);
+      }
+      [data-theme="neon"] { /* Neon Pulse */
+        --bg: #0d0514; --bg-2: #140826; --surface: #1c0b30; --surface-2: #281040;
+        --ink: #fdf2ff; --muted: #cba9dd; --faint: #8a6ba3;
+        --accent: #ff2e88; --accent-2: #2ee6ff; --on-accent: #ffffff;
+        --line: rgba(255,46,136,.35); --line-soft: rgba(253,242,255,.12);
+        --hero-shade: linear-gradient(180deg, rgba(13,5,20,.55) 0%, rgba(13,5,20,.35) 40%, rgba(13,5,20,.93) 100%);
+        --glow: rgba(255,46,136,.20);
+      }
+      [data-theme="velvet"] { /* Velvet Noir */
+        --bg: #0c0a0b; --bg-2: #120d10; --surface: #1d1518; --surface-2: #291c20;
+        --ink: #f7ece7; --muted: #bb9d99; --faint: #7e6763;
+        --accent: #a52a47; --accent-2: #e3a68b; --on-accent: #ffffff;
+        --line: rgba(227,166,139,.30); --line-soft: rgba(247,236,231,.12);
+        --hero-shade: linear-gradient(180deg, rgba(12,10,11,.58) 0%, rgba(12,10,11,.38) 40%, rgba(12,10,11,.93) 100%);
+        --glow: rgba(165,42,71,.22);
+      }
+      [data-theme="ultraviolet"] { /* Ultraviolet */
+        --bg: #0a0618; --bg-2: #0f0824; --surface: #180d38; --surface-2: #22124c;
+        --ink: #f1ecff; --muted: #ada2dc; --faint: #7468a3;
+        --accent: #9d6bff; --accent-2: #cfd6ea; --on-accent: #ffffff;
+        --line: rgba(157,107,255,.35); --line-soft: rgba(241,236,255,.12);
+        --hero-shade: linear-gradient(180deg, rgba(10,6,24,.55) 0%, rgba(10,6,24,.35) 40%, rgba(10,6,24,.93) 100%);
+        --glow: rgba(157,107,255,.20);
+      }
+      [data-theme="crimson"] { /* Crimson Royale */
+        --bg: #0a0506; --bg-2: #100709; --surface: #1c0d10; --surface-2: #281216;
+        --ink: #f8f1ec; --muted: #c2a49e; --faint: #87685f;
+        --accent: #e01e2b; --accent-2: #d8dee9; --on-accent: #ffffff;
+        --line: rgba(224,30,43,.38); --line-soft: rgba(248,241,236,.12);
+        --hero-shade: linear-gradient(180deg, rgba(10,5,6,.58) 0%, rgba(10,5,6,.38) 40%, rgba(10,5,6,.93) 100%);
+        --glow: rgba(224,30,43,.22);
+      }
+      [data-theme="emerald"] { /* Emerald Encore */
+        --bg: #050b08; --bg-2: #081009; --surface: #0e1f14; --surface-2: #142b1c;
+        --ink: #f2efdd; --muted: #a9bfa8; --faint: #6d8568;
+        --accent: #10b981; --accent-2: #d9b45b; --on-accent: #04150c;
+        --line: rgba(16,185,129,.35); --line-soft: rgba(242,239,221,.12);
+        --hero-shade: linear-gradient(180deg, rgba(5,11,8,.58) 0%, rgba(5,11,8,.38) 40%, rgba(5,11,8,.94) 100%);
+        --glow: rgba(16,185,129,.20);
+      }
+      [data-theme="rose"] { /* Rose Noir */
+        --bg: #0d0809; --bg-2: #130a0c; --surface: #1f1216; --surface-2: #2a181e;
+        --ink: #f9ede8; --muted: #c9a89f; --faint: #8a6f68;
+        --accent: #d99a86; --accent-2: #f2c9b8; --on-accent: #241109;
+        --line: rgba(217,154,134,.32); --line-soft: rgba(249,237,232,.12);
+        --hero-shade: linear-gradient(180deg, rgba(13,8,9,.58) 0%, rgba(13,8,9,.38) 40%, rgba(13,8,9,.93) 100%);
+        --glow: rgba(217,154,134,.20);
+      }
+      [data-theme="sapphire"] { /* Sapphire Nights */
+        --bg: #05070f; --bg-2: #070c1a; --surface: #0d1730; --surface-2: #132344;
+        --ink: #eef2fb; --muted: #a7b4cf; --faint: #6c7a99;
+        --accent: #4a86e8; --accent-2: #d7deeb; --on-accent: #ffffff;
+        --line: rgba(91,139,239,.35); --line-soft: rgba(238,242,251,.12);
+        --hero-shade: linear-gradient(180deg, rgba(5,7,15,.55) 0%, rgba(5,7,15,.35) 40%, rgba(5,7,15,.93) 100%);
+        --glow: rgba(74,134,232,.22);
+      }
+      [data-theme="platinum"] { /* Platinum Ice */
+        --bg: #060606; --bg-2: #0a0a0a; --surface: #141414; --surface-2: #1e1e1e;
+        --ink: #f5f5f5; --muted: #bdbdbd; --faint: #7f7f7f;
+        --accent: #d9d9d9; --accent-2: #ffffff; --on-accent: #0a0a0a;
+        --line: rgba(217,217,217,.30); --line-soft: rgba(245,245,245,.12);
+        --hero-shade: linear-gradient(180deg, rgba(6,6,6,.58) 0%, rgba(6,6,6,.38) 40%, rgba(6,6,6,.94) 100%);
+        --glow: rgba(217,217,217,.18);
+      }
+      [data-theme="sunset"] { /* Sunset Ember */
+        --bg: #0c0705; --bg-2: #120a06; --surface: #1e120a; --surface-2: #2a190e;
+        --ink: #f9efe4; --muted: #c8ab90; --faint: #8a6f57;
+        --accent: #e8862e; --accent-2: #f5bc66; --on-accent: #1f1204;
+        --line: rgba(232,134,46,.32); --line-soft: rgba(249,239,228,.12);
+        --hero-shade: linear-gradient(180deg, rgba(12,7,5,.58) 0%, rgba(12,7,5,.38) 40%, rgba(12,7,5,.93) 100%);
+        --glow: rgba(232,134,46,.20);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Jost", "Segoe UI", system-ui, sans-serif;
+        font-size: 1.125rem; line-height: 1.6;
+        transition: background-color .45s ease, color .45s ease;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: var(--accent-2); }
+      ::selection { background: var(--accent); color: var(--on-accent); }
+
+      .serif { font-family: "Playfair Display", Georgia, serif; }
+      .wrap { width: min(1180px, 100% - 2.5rem); margin-inline: auto; }
+      .section { padding: clamp(2.2rem, 5vw, 3.6rem) 0; }
+      .section.alt { background: var(--bg-2); }
+
+      /* ============ HEADER + THEME SWITCHER ============ */
+      header.site {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line-soft);
+      }
+      .header-row { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: .7rem 0; flex-wrap: wrap; }
+      .wordmark { text-decoration: none; display: inline-flex; align-items: center; line-height: 0; }
+      /* Approved Flatline logo artwork (assets/logo.png, transparent background).
+         The red metal shifts hue to match whichever color scheme is active. */
+      .logo-img { display: block; transition: filter .45s ease; }
+      [data-theme="midnight"] .logo-img { filter: hue-rotate(43deg) saturate(.82) brightness(1.04); }
+      [data-theme="neon"] .logo-img { filter: hue-rotate(-26deg); }
+      [data-theme="velvet"] .logo-img { filter: hue-rotate(-14deg) saturate(.88); }
+      [data-theme="ultraviolet"] .logo-img { filter: hue-rotate(-100deg) saturate(.92); }
+      [data-theme="crimson"] .logo-img { filter: none; }
+      [data-theme="emerald"] .logo-img { filter: hue-rotate(160deg) saturate(.92); }
+      [data-theme="rose"] .logo-img { filter: hue-rotate(-8deg) saturate(.8) brightness(1.06); }
+      [data-theme="sapphire"] .logo-img { filter: hue-rotate(-145deg) saturate(.9); }
+      [data-theme="platinum"] .logo-img { filter: saturate(0) brightness(1.35) contrast(.92); }
+      [data-theme="sunset"] .logo-img { filter: hue-rotate(28deg) saturate(1.05); }
+      footer .logo-img { height: 58px; width: auto; }
+      @media (max-width: 640px) { footer .logo-img { height: 50px; } }
+
+      /* ============ LOGO BANNER + SLOGAN ============ */
+      .logo-banner { text-align: center; padding: clamp(1.4rem, 4vw, 2.4rem) 0 clamp(1.2rem, 3vw, 1.8rem); }
+      .logo-banner .logo-img { width: min(840px, 92vw); height: auto; margin-inline: auto; }
+      .slogan {
+        font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 700;
+        font-size: clamp(1.45rem, 4.2vw, 2.3rem); line-height: 1.2;
+        color: var(--ink); margin: clamp(.9rem, 2.5vw, 1.4rem) 0 0;
+      }
+      .slogan em { color: var(--accent); }
+      nav.main { display: flex; gap: 1.4rem; flex-wrap: wrap; justify-content: center; }
+      nav.main a { color: var(--ink); text-decoration: none; font-size: .98rem; letter-spacing: .04em; }
+      nav.main a:hover, nav.main a:focus-visible { color: var(--accent); }
+      .btn {
+        display: inline-block; background: var(--accent); color: var(--on-accent);
+        font-weight: 600; letter-spacing: .05em; text-decoration: none;
+        padding: .65rem 1.4rem; border-radius: 999px; border: 1px solid var(--accent);
+        cursor: pointer; font-family: inherit; font-size: 1rem;
+        transition: transform .15s ease, background-color .3s ease, border-color .3s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+      .btn.ghost:hover { color: var(--accent); border-color: var(--accent); }
+
+      /* ============ LOCATION STRIP (very top of page) ============ */
+      .where-strip { background: var(--accent); color: var(--on-accent); text-align: center; padding: .55rem 1rem; }
+      .where-strip p { margin: 0; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; font-size: .85rem; }
+
+      /* ============ COLOR PREVIEW BAR (revealed by triple-tapping the logo) ============ */
+      /* Sits in normal document flow at the very top of the page: it never overlays
+         content and can never block or trap scrolling, open or collapsed. */
+      .admin-bar[hidden] { display: none; }
+      .admin-bar { background: var(--surface); border-bottom: 1px solid var(--line); }
+      .admin-bar-in { display: flex; align-items: center; gap: .35rem .6rem; flex-wrap: wrap; padding: .3rem .7rem; }
+      .admin-bar .ab-label { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+      .admin-bar .ab-btns { display: flex; flex-wrap: wrap; gap: .3rem; align-items: center; }
+      .admin-bar .scheme-btn { padding: .16rem .55rem .16rem .28rem; font-size: .78rem; gap: .35rem; background: var(--surface-2); }
+      .admin-bar .scheme-btn .swatch { width: .95rem; height: .95rem; }
+      .admin-bar .ab-note { font-size: .72rem; color: var(--faint); margin: 0; }
+      .admin-bar .ab-toggle {
+        margin-left: auto; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 6px;
+        background: transparent; color: var(--muted); border: 1px solid var(--line-soft);
+        cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+      }
+      .admin-bar .ab-toggle:hover { color: var(--accent); border-color: var(--accent); }
+      .admin-bar .ab-toggle svg { width: .9rem; height: .9rem; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; display: block; transition: transform .2s ease; }
+      .admin-bar.collapsed .ab-btns, .admin-bar.collapsed .ab-note { display: none; }
+      .admin-bar.collapsed .ab-toggle svg { transform: rotate(180deg); }
+      .scheme-btn {
+        display: inline-flex; align-items: center; gap: .5rem;
+        background: var(--surface); color: var(--ink);
+        border: 1px solid var(--line-soft); border-radius: 999px;
+        padding: .38rem .85rem .38rem .45rem; cursor: pointer;
+        font-family: inherit; font-size: .92rem; font-weight: 500; letter-spacing: .02em;
+        transition: border-color .25s ease, background-color .25s ease, transform .15s ease;
+      }
+      .scheme-btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+      .scheme-btn[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 18px var(--glow); }
+      .scheme-btn .swatch { width: 1.35rem; height: 1.35rem; border-radius: 50%; flex: none; border: 1px solid rgba(255,255,255,.35); }
+
+      /* ============ HERO ============ */
+      .hero { position: relative; isolation: isolate; overflow: hidden; }
+      .hero .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: saturate(.16) brightness(.74) contrast(1.03); }
+      /* Neutral near-black shade in every scheme, so the hero never reads purple. */
+      .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,8,.74) 0%, rgba(6,6,8,.62) 40%, rgba(6,6,8,.95) 100%); z-index: -1; }
+      .hero-inner { padding: clamp(1.2rem, 3.5vw, 2.2rem) 0 clamp(3.5rem, 8vw, 6rem); text-align: center; }
+      .hero .where { letter-spacing: .3em; text-transform: uppercase; font-size: .85rem; color: var(--accent-2); }
+      .hero h1 {
+        font-family: "Playfair Display", Georgia, serif; font-weight: 900;
+        font-size: clamp(2.7rem, 8.5vw, 5.6rem); line-height: 1.02; margin: .6rem auto 1rem; max-width: 12ch; text-align: center;
+      }
+      .hero h1 em { font-style: italic; font-weight: 700; color: var(--accent); }
+      .hero p.lede { font-size: clamp(1.1rem, 2.4vw, 1.35rem); max-width: 34rem; color: var(--ink); margin-inline: auto; text-align: center; }
+      .hero .cta-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.6rem; justify-content: center; }
+      .pulse-line { margin-top: 2.2rem; max-width: 520px; margin-inline: auto; }
+      .pulse-line svg { width: 100%; height: 44px; display: block; }
+      .pulse-line path {
+        fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round;
+        stroke-dasharray: 620; stroke-dashoffset: 620; animation: pulse-draw 3.2s ease-in-out infinite;
+      }
+      @keyframes pulse-draw { 0% { stroke-dashoffset: 620; } 55% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -620; } }
+
+      .stats { border-top: 1px solid var(--line-soft); margin-top: 3rem; padding-top: 1.4rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+      .stat .stat-num { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.3rem); color: var(--accent-2); line-height: 1.1; }
+      .stat .stat-label { font-size: .9rem; color: var(--muted); margin-top: .15rem; }
+      .stars { color: var(--accent); letter-spacing: .12em; font-size: .95rem; }
+
+      /* ============ MARQUEE ============ */
+      .marquee { border-block: 1px solid var(--line); background: var(--bg-2); overflow: hidden; padding: .85rem 0; }
+      .marquee-track { display: flex; gap: 2.6rem; width: max-content; animation: marquee 36s linear infinite; }
+      .marquee-track span { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-size: 1.15rem; color: var(--muted); white-space: nowrap; }
+      .marquee-track span b { color: var(--accent); font-weight: 500; font-style: normal; font-family: "Jost", sans-serif; font-size: .8rem; vertical-align: middle; }
+      @keyframes marquee { to { transform: translateX(-50%); } }
+
+      /* ============ SECTION HEADS ============ */
+      .kicker { letter-spacing: .3em; text-transform: uppercase; font-size: .8rem; color: var(--accent); margin: 0 0 .5rem; text-align: center; }
+      h2.title { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.08; margin: 0 0 .8rem; text-align: center; }
+      h2.title em { font-style: italic; color: var(--accent); }
+      .intro { color: var(--muted); max-width: 44rem; font-size: 1.12rem; }
+
+      /* ============ SERVICES ============ */
+      .service { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(1.6rem, 4vw, 3.5rem); align-items: center; padding: clamp(1.8rem, 4vw, 2.8rem) 0; border-bottom: 1px solid var(--line-soft); }
+      .service:last-child { border-bottom: 0; }
+      .service.flip .svc-media { order: 2; }
+      .svc-media { border-radius: 6px; overflow: hidden; position: relative; }
+      .svc-media::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px var(--line-soft); border-radius: 6px; pointer-events: none; }
+      .svc-media img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; aspect-ratio: 4 / 3; }
+      .svc-num { font-family: "Playfair Display", Georgia, serif; font-style: italic; color: var(--faint); font-size: 1rem; }
+      .svc-body h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.2rem); margin: .2rem 0 .5rem; line-height: 1.15; text-align: center; }
+      .svc-body p { color: var(--muted); margin: 0 0 1rem; }
+      .chip-row { display: flex; flex-wrap: wrap; gap: .45rem; }
+      .chip { font-size: .88rem; border: 1px solid var(--line); color: var(--accent-2); border-radius: 999px; padding: .22rem .75rem; }
+
+      /* Community (last of #events) flows straight into the slideshow:
+         no stacked section padding creating an empty black gap. */
+      #events { padding-bottom: 0; }
+      #events .service:last-child { padding-bottom: 1rem; }
+      #gallery { padding-top: clamp(1.2rem, 3vw, 2rem); }
+
+      /* ============ SLIDESHOW ============ */
+      .slideshow { margin-top: 2.4rem; }
+      .slideshow-stage {
+        position: relative; overflow: hidden; border: 1px solid var(--line);
+        border-radius: 8px; background: var(--surface); aspect-ratio: 4 / 3;
+      }
+      .slide {
+        position: absolute; inset: 0; margin: 0; opacity: 0; pointer-events: none;
+        transition: opacity .65s ease;
+      }
+      .slide.active { opacity: 1; pointer-events: auto; }
+      .slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+      .slide figcaption {
+        position: absolute; left: 0; right: 0; bottom: 0;
+        padding: 3.2rem 1.2rem 1rem;
+        background: linear-gradient(180deg, transparent, rgba(0,0,0,.78));
+        color: #fff; font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.25rem, 3vw, 2rem); font-weight: 700; line-height: 1.15;
+      }
+      .slide-arrow {
+        position: absolute; top: 50%; z-index: 3; transform: translateY(-50%);
+        width: 2.75rem; height: 2.75rem; border-radius: 50%;
+        border: 1px solid rgba(255,255,255,.55); background: rgba(0,0,0,.48);
+        color: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+        font-family: inherit; font-size: 2rem; line-height: 1; padding: 0 0 .2rem;
+        transition: background-color .25s ease, border-color .25s ease;
+      }
+      .slide-arrow:hover, .slide-arrow:focus-visible { background: rgba(0,0,0,.72); border-color: #fff; }
+      .slide-arrow.prev { left: .8rem; }
+      .slide-arrow.next { right: .8rem; }
+      /* Dots live in their own row under the photo, never over the caption. */
+      .slide-dots {
+        display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; justify-content: center;
+        margin-top: .9rem;
+      }
+      .slide-dot {
+        width: .72rem; height: .72rem; border-radius: 50%; padding: 0;
+        border: 1px solid var(--line); background: var(--surface-2);
+        cursor: pointer; transition: background-color .25s ease, border-color .25s ease;
+      }
+      .slide-dot:hover, .slide-dot:focus-visible { border-color: var(--accent); }
+      .slide-dot[aria-current="true"] { background: var(--accent); border-color: var(--accent); }
+      @media (max-width: 640px) {
+        .slideshow-stage { aspect-ratio: 1 / 1.08; }
+        .slide-arrow { width: 2.45rem; height: 2.45rem; }
+        .slide-dots { gap: .3rem; }
+        .slide-dot { width: .55rem; height: .55rem; }
+      }
+
+      /* ============ VIDEOS ============ */
+      .video-grid { display: grid; gap: clamp(1.4rem, 3.5vw, 2.4rem); margin-top: 2.4rem; }
+      .video-feature { width: 100%; max-width: 880px; margin-inline: auto; }
+      .video-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 330px)); justify-content: center; gap: clamp(1.4rem, 3.5vw, 2.4rem); }
+      .video-card { margin: 0; }
+      .video-frame { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #000; }
+      .video-card video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+      .video-card video.portrait { aspect-ratio: 9 / 16; }
+      .video-card figcaption {
+        margin-top: .75rem; text-align: center;
+        font-family: "Playfair Display", Georgia, serif; font-style: italic;
+        font-size: 1.12rem; color: var(--accent-2);
+      }
+      @media (max-width: 640px) {
+        .video-pair { grid-template-columns: minmax(0, 330px); }
+      }
+
+      /* ============ EXTRAS ============ */
+      .extras-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 3vw, 2.2rem); margin-top: 2.2rem; }
+      .extra { border-top: 2px solid var(--accent); padding-top: 1rem; }
+      .extra h3 { font-family: "Playfair Display", Georgia, serif; font-size: 1.35rem; margin: 0 0 .4rem; text-align: center; }
+      .extra p { color: var(--muted); margin: 0; font-size: 1.02rem; }
+      .price-note { margin-top: 2.4rem; display: flex; gap: 1rem; align-items: baseline; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 6px; padding: 1.1rem 1.4rem; background: var(--surface); }
+      .price-note .amt { font-family: "Playfair Display", Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--accent-2); }
+      .price-note p { margin: 0; color: var(--muted); }
+
+      /* ============ ABOUT ============ */
+      .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: center; }
+      .about-media { position: relative; border-radius: 6px; overflow: hidden; }
+      .about-media img { width: 100%; aspect-ratio: 3 / 2.4; object-fit: cover; filter: saturate(.35) contrast(1.05); }
+      .about-media .duo { position: absolute; inset: 0; background: var(--accent); mix-blend-mode: overlay; opacity: .38; }
+      .about-media .badge {
+        position: absolute; left: 1rem; bottom: 1rem; background: color-mix(in srgb, var(--bg) 82%, transparent);
+        border: 1px solid var(--line); border-radius: 6px; padding: .5rem .9rem; font-size: .95rem;
+      }
+      .about-media .badge b { color: var(--accent-2); font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; }
+      .about-copy p { color: var(--muted); }
+      .about-copy p strong { color: var(--ink); font-weight: 600; }
+      .about-points { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; gap: .7rem; }
+      .about-points li { display: flex; gap: .7rem; align-items: baseline; }
+      .about-points .dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); flex: none; transform: translateY(-2px); }
+
+      /* ============ REVIEWS ============ */
+      .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1.2rem, 3vw, 2rem); margin-top: 2rem; }
+      .review-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.6rem 1.7rem; }
+      .review-card .big { font-family: "Playfair Display", Georgia, serif; font-weight: 900; font-size: 3.2rem; line-height: 1; color: var(--ink); }
+      .review-card .of { color: var(--muted); font-size: 1rem; }
+      .review-card h3 { margin: .4rem 0 .3rem; font-size: 1.05rem; letter-spacing: .06em; text-align: center; }
+      .review-card p { color: var(--muted); margin: 0 0 1rem; }
+      .quotes-title { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.4rem, 3vw, 1.8rem); margin: 2.8rem 0 .4rem; text-align: center; }
+      .quote-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.4rem 1.5rem; }
+      .quote-card .stars { margin-bottom: .55rem; }
+      .quote-card blockquote { margin: 0 0 .8rem; color: var(--ink); font-size: 1.06rem; line-height: 1.55; }
+      .quote-card .reviewer { color: var(--accent-2); font-weight: 600; letter-spacing: .03em; font-size: .95rem; margin: 0; }
+      .quote-card .reviewer .role { color: var(--muted); font-weight: 400; }
+      .reviews-note { color: var(--faint); font-size: .95rem; margin: 1.2rem 0 0; max-width: 46rem; }
+      .reviews-link { margin: 1.4rem 0 0; }
+      .bash-badge { width: 118px; height: auto; margin: 1.1rem auto 0; border-radius: 6px; }
+      #reviews { padding-bottom: clamp(1.4rem, 3.5vw, 2.2rem); }
+
+      /* ============ AREA ============ */
+      .area-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: start; }
+      .city-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+      .city-chips .chip { font-size: .98rem; padding: .35rem .9rem; }
+
+      /* ============ BOOKING ============ */
+      .book-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: start; }
+      .call-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.5rem 1.6rem; margin-top: 1.4rem; }
+      .call-card .phone { font-family: "Playfair Display", Georgia, serif; font-size: 1.9rem; font-weight: 700; }
+      .call-card .phone a { color: var(--ink); text-decoration: none; }
+      .call-card .phone a:hover { color: var(--accent-2); }
+      .confirm-pill { display: inline-block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; border: 1px dashed var(--accent); color: var(--accent-2); border-radius: 999px; padding: .15rem .6rem; margin-left: .5rem; vertical-align: middle; }
+      form.inquiry { display: grid; gap: 1rem; }
+      .field label { display: block; font-size: .92rem; letter-spacing: .05em; color: var(--accent-2); margin-bottom: .35rem; }
+      .field input, .field select, .field textarea {
+        width: 100%; background: var(--surface); color: var(--ink);
+        border: 1px solid var(--line-soft); border-radius: 6px;
+        padding: .7rem .85rem; font: inherit; font-size: 1rem;
+      }
+      .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+      .field .hint { font-size: .85rem; color: var(--faint); margin-top: .3rem; }
+      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .inquiry-output { display: none; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1.2rem 1.4rem; margin-top: 1.2rem; }
+      .inquiry-output.show { display: block; }
+      .inquiry-output h3 { margin: 0 0 .5rem; font-family: "Playfair Display", Georgia, serif; text-align: center; }
+      .inquiry-output pre { white-space: pre-wrap; font-family: inherit; font-size: .98rem; color: var(--muted); margin: 0 0 1rem; }
+      .output-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+      .copy-ok { color: var(--accent-2); font-size: .92rem; align-self: center; }
+
+      /* ============ SOCIAL ============ */
+      .social-label { letter-spacing: .3em; text-transform: uppercase; font-size: .8rem; color: var(--accent); margin: 0 0 .6rem; }
+      .social-links { display: flex; flex-wrap: wrap; gap: .7rem; }
+      .social-link {
+        display: inline-flex; align-items: center; gap: .55rem;
+        background: var(--surface); color: var(--ink); text-decoration: none;
+        border: 1px solid var(--line); border-radius: 999px; padding: .45rem 1rem .45rem .45rem;
+        font-weight: 500; letter-spacing: .02em; font-size: 1rem;
+        transition: transform .15s ease, border-color .25s ease, color .25s ease;
+      }
+      .social-link:hover, .social-link:focus-visible { transform: translateY(-1px); border-color: var(--accent); color: var(--accent-2); }
+      .social-link .social-ic {
+        width: 1.9rem; height: 1.9rem; border-radius: 50%; flex: none;
+        display: inline-flex; align-items: center; justify-content: center;
+        background: var(--accent); color: var(--on-accent);
+        transition: background-color .3s ease, color .3s ease;
+      }
+      .social-link .social-ic svg { width: 1.05rem; height: 1.05rem; fill: currentColor; display: block; }
+      .social-block { margin-top: 1.4rem; }
+
+      footer.site { border-top: 1px solid var(--line-soft); padding: 2.4rem 0 2.8rem; background: var(--bg-2); }
+      footer.site .foot-row { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; align-items: start; }
+      footer.site p { color: var(--faint); font-size: .92rem; max-width: 34rem; }
+
+      @media (max-width: 860px) {
+        .stats { grid-template-columns: repeat(2, 1fr); }
+        .service, .service.flip .svc-media { grid-template-columns: 1fr; order: 0; }
+        .extras-grid, .reviews-grid { grid-template-columns: 1fr; }
+        .about-grid, .area-grid, .book-grid { grid-template-columns: 1fr; }
+        .form-row { grid-template-columns: 1fr; }
+        nav.main { gap: 1rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .marquee-track { animation: none; }
+        .pulse-line path { animation: none; stroke-dashoffset: 0; }
+        .btn:hover, .scheme-btn:hover, .social-link:hover { transform: none; }
+        .logo-img { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Color preview bar: hidden from regular visitors. Tapping the logo three
+         times in a row shows or hides it, no URL editing needed. It sits in
+         normal page flow at the very top, so it never overlays content and the
+         page scrolls freely whether it is expanded or collapsed. -->
+    <div class="admin-bar" id="admin-bar" hidden>
+      <div class="admin-bar-in">
+        <span class="ab-label" id="ap-label">Preview colors</span>
+        <div class="ab-btns" id="ab-btns" role="group" aria-label="Preview color schemes">
+          <button type="button" class="scheme-btn" data-scheme="midnight" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #0b0f1d 55%, #d9b45b 55%);" aria-hidden="true"></span>Midnight Gold
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="neon" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #1c0b30 55%, #ff2e88 55%);" aria-hidden="true"></span>Neon Pulse
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="velvet" aria-pressed="true" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #1d1518 55%, #e3a68b 55%);" aria-hidden="true"></span>Velvet Noir
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="ultraviolet" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #180d38 55%, #9d6bff 55%);" aria-hidden="true"></span>Ultraviolet
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="crimson" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #1c0d10 55%, #e01e2b 55%);" aria-hidden="true"></span>Crimson Royale
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="emerald" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #0e1f14 55%, #10b981 55%);" aria-hidden="true"></span>Emerald Encore
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="rose" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #1f1216 55%, #d99a86 55%);" aria-hidden="true"></span>Rose Noir
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="sapphire" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #0d1730 55%, #4a86e8 55%);" aria-hidden="true"></span>Sapphire Nights
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="platinum" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #141414 55%, #d9d9d9 55%);" aria-hidden="true"></span>Platinum Ice
+          </button>
+          <button type="button" class="scheme-btn" data-scheme="sunset" aria-pressed="false" aria-describedby="ap-label">
+            <span class="swatch" style="background: linear-gradient(135deg, #1e120a 55%, #e8862e 55%);" aria-hidden="true"></span>Sunset Ember
+          </button>
+        </div>
+        <p class="ab-note">Preview only. Visitors always see Velvet Noir. Tap the logo three times to hide this bar.</p>
+        <button type="button" class="ab-toggle" id="admin-bar-toggle" aria-expanded="true" aria-controls="ab-btns" aria-label="Collapse color preview bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 14l7-6 7 6" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="where-strip"><p>Dallas Fort Worth and surrounding areas</p></div>
+
+    <!-- Logo banner: the approved artwork stretched across the top at its natural
+         proportions, recolored to match the active scheme. Triple-tap it to
+         open or close the color preview bar. -->
+    <div class="logo-banner wrap">
+      <img class="logo-img" id="banner-logo" src="assets/logo.png" alt="Flatline Entertainment" title="Flatline Entertainment" />
+      <p class="slogan">We put the <em>life</em> into your party.</p>
+    </div>
+
+    <header class="site">
+      <div class="wrap header-row">
+        <nav class="main" aria-label="Main">
+          <a href="#events">Events</a>
+          <a href="#videos">Videos</a>
+          <a href="#extras">Included</a>
+          <a href="#about">Your DJ</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#area">Service area</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <img class="hero-img" src="assets/party.jpg" alt="A DJ with hands raised over a packed, light-filled dance floor" />
+        <div class="wrap hero-inner">
+          <h1>Elegant by dinner. <em>Electric</em> by midnight.</h1>
+          <p class="lede">Flatline Entertainment is a mobile DJ service for weddings, quinceaneras, school dances, corporate nights, and every party in between. Classy when the moment calls for it. All energy when the floor opens up.</p>
+          <div class="cta-row">
+            <a class="btn" href="#events">See what we do</a>
+          </div>
+          <div class="pulse-line" aria-hidden="true">
+            <svg viewBox="0 0 520 44" preserveAspectRatio="none"><path d="M0,22 L150,22 L168,22 L178,6 L192,38 L204,22 L300,22 L318,22 L328,10 L340,34 L350,22 L520,22" /></svg>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">5.0 <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+              <div class="stat-label">average rating on The Bash</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">1999</div>
+              <div class="stat-label">in the music scene since</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track">
+          <span>Weddings <b>&#10022;</b></span><span>Quinceaneras <b>&#10022;</b></span><span>Proms <b>&#10022;</b></span>
+          <span>School dances <b>&#10022;</b></span><span>Sweet 16s <b>&#10022;</b></span><span>Corporate events <b>&#10022;</b></span>
+          <span>Birthday parties <b>&#10022;</b></span><span>Holiday parties <b>&#10022;</b></span>
+          <span>Graduations <b>&#10022;</b></span><span>Retirement parties <b>&#10022;</b></span>
+        </div>
+      </div>
+
+      <!-- EVENTS -->
+      <section class="section" id="events">
+        <div class="wrap">
+          <p class="kicker">What we do</p>
+          <h2 class="title">One DJ. <em>Every kind</em> of night.</h2>
+          <p class="intro">Flatline plays the room in front of us, not a preset playlist. Here is where you will find us most weekends.</p>
+
+          <article class="service">
+            <div class="svc-media"><img src="assets/wedding.jpg" alt="A bride and groom sharing their first dance on a sparkling lit floor" /></div>
+            <div class="svc-body">
+              <span class="svc-num">No. 1</span>
+              <h3>Weddings</h3>
+              <p>Your ceremony sounds clear from the front row to the back. Cocktail hour stays warm and easy. Then the reception builds, song by song, until the floor is full and nobody wants the last dance to end.</p>
+              <div class="chip-row"><span class="chip">Ceremony sound</span><span class="chip">Cocktail hour</span><span class="chip">Reception</span><span class="chip">After party</span><span class="chip">Engagement parties</span></div>
+            </div>
+          </article>
+
+          <article class="service flip">
+            <div class="svc-media"><img src="assets/quince.jpg" alt="A quinceanera in a blush ballgown dancing with her court in a decorated ballroom" /></div>
+            <div class="svc-body">
+              <span class="svc-num">No. 2</span>
+              <h3>Quinceaneras &amp; Sweet 16s</h3>
+              <p>A milestone this big deserves a night that feels like hers. We keep the traditions front and center, the family proud, and the dance floor packed with her favorite people.</p>
+              <div class="chip-row"><span class="chip">Quinceaneras</span><span class="chip">Sweet 16 parties</span><span class="chip">Family celebrations</span></div>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="svc-media"><img src="assets/school.jpg" alt="Students dancing under colorful party lights at a school dance" /></div>
+            <div class="svc-body">
+              <span class="svc-num">No. 3</span>
+              <h3>Proms &amp; school dances</h3>
+              <p>Current hits, clean edits, and a floor that stays moving from the first song to the last. The students get their night. The chaperones get their peace of mind.</p>
+              <div class="chip-row"><span class="chip">Proms</span><span class="chip">School dances</span><span class="chip">Graduation parties</span></div>
+            </div>
+          </article>
+
+          <article class="service flip">
+            <div class="svc-media"><img src="assets/birthday.jpg" alt="Friends dancing together at a birthday house party" /></div>
+            <div class="svc-body">
+              <span class="svc-num">No. 4</span>
+              <h3>Birthday &amp; private parties</h3>
+              <p>Kids' birthdays, milestone birthdays, retirements, holiday parties, backyard blowouts. If there is a reason to gather your people, we will bring the reason to dance.</p>
+              <div class="chip-row"><span class="chip">Kids &amp; adults</span><span class="chip">Retirement parties</span><span class="chip">Holiday parties</span><span class="chip">Private parties</span></div>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="svc-media"><img src="assets/corporate.jpg" alt="An elegantly decorated corporate event room with dressed tables, candlelight, and a dance floor" /></div>
+            <div class="svc-body">
+              <span class="svc-num">No. 5</span>
+              <h3>Corporate events</h3>
+              <p>Company functions that people actually enjoy, handled with a polished setup and professional pacing. Easy to work with from first call to last song.</p>
+              <div class="chip-row"><span class="chip">Corporate functions</span><span class="chip">Company celebrations</span><span class="chip">Team parties</span></div>
+            </div>
+          </article>
+
+          <article class="service flip">
+            <div class="svc-media"><img src="assets/community.jpg" alt="Aerial view of neighbors gathered at a small-town street festival with vendor tents and food trucks" /></div>
+            <div class="svc-body">
+              <span class="svc-num">No. 6</span>
+              <h3>Community events</h3>
+              <p>From sorority functions to town celebrations, we bring sound that carries across the whole gathering and music that gets the whole neighborhood on its feet.</p>
+              <div class="chip-row"><span class="chip">Community events</span><span class="chip">Sorority functions</span><span class="chip">Town celebrations</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SLIDESHOW -->
+      <section class="section" id="gallery" aria-labelledby="gallery-title">
+        <div class="wrap">
+          <p class="kicker">Real Flatline nights</p>
+          <h2 class="title" id="gallery-title">The proof is in the <em>pictures</em></h2>
+          <p class="intro">A few moments from recent weddings and celebrations, with Mark Anthony behind the decks and on the floor.</p>
+
+          <div class="slideshow" id="slideshow">
+            <div class="slideshow-stage" role="group" aria-roledescription="carousel" aria-label="Flatline Entertainment event photos">
+              <figure class="slide active">
+                <img src="assets/heath-lanie-oakley-1.jpg" alt="Mark Anthony taking a selfie with wedding clients Heath and Lanie Oakley" />
+                <figcaption>Heath and Lanie Oakley</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/gbp-2.jpg" alt="Black-and-white photo of a laughing bride beside a guest speaking into a microphone at a wedding reception" loading="lazy" />
+                <figcaption>Wedding reception</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/mark-anthony-dj-booth.jpg" alt="Mark Anthony DJing live at the booth in a cowboy hat" loading="lazy" />
+                <figcaption>Mark Anthony live</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-6.jpg" alt="A fire performer spinning flames beside a pool at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/user-3.jpg" alt="A bride and groom smiling beside a private jet at their wedding" loading="lazy" />
+                <figcaption>Wedding ceremony</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/dance-floor-party.jpg" alt="A packed dance floor with couples dancing in front of the DJ booth" loading="lazy" />
+                <figcaption>Packing the dance floor</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-4.jpg" alt="Mark Anthony close up at the DJ booth, headphones on" loading="lazy" />
+                <figcaption>On the decks</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/barn-wedding-dance.jpg" alt="A wedding reception dance floor in a rustic barn venue with the DJ booth glowing pink in the foreground" loading="lazy" />
+                <figcaption>Wedding reception</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/gbp-8.jpg" alt="An outdoor wedding ceremony in front of a private jet at sunset, with guests seated along the aisle" loading="lazy" />
+                <figcaption>Wedding ceremony</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/heath-lanie-first-dance.jpg" alt="Heath and Lanie sharing their last dance at their wedding reception" loading="lazy" />
+                <figcaption>Last dance</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/user-4.jpg" alt="Mark Anthony performing live in a white suit, microphone in hand" loading="lazy" />
+                <figcaption>Mark Anthony live</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-10.jpg" alt="A hula dancer performing with a microphone at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/guerra-wedding.jpg" alt="Mark Anthony taking an outdoor wedding selfie with the Guerra bride and groom" loading="lazy" />
+                <figcaption>Guerra Wedding</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/gbp-3.jpg" alt="A wedding reception room with the Flatline DJ booth, blue uplighting, and an open dance floor" loading="lazy" />
+                <figcaption>Wedding reception</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-1.jpg" alt="Hands working the DJ turntables and mixer up close" loading="lazy" />
+                <figcaption>The setup</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/house-party-setup.jpg" alt="The Flatline DJ setup ready to go at a house party" loading="lazy" />
+                <figcaption>House party</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-11.jpg" alt="Guests dancing alongside a hula dancer at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/mark-anthony-headphones.jpg" alt="Mark Anthony wearing headphones at the DJ booth" loading="lazy" />
+                <figcaption>Mark Anthony</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/gbp-4.jpg" alt="The Flatline DJ booth with glowing panels and disco lights washing the wall" loading="lazy" />
+                <figcaption>The setup</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/wedding-couple-selfie.jpg" alt="Mark Anthony taking a selfie with wedding couple Danica and Chris" loading="lazy" />
+                <figcaption>Danica and Chris</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-8.jpg" alt="Hula dancers performing for a crowd at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/event-room-setup.jpg" alt="A decorated event room with the Flatline DJ booth set up and ready" loading="lazy" />
+                <figcaption>Event setup</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/user-1.jpg" alt="A helicopter arriving over the venue as wedding guests watch from below" loading="lazy" style="object-position: center 30%;" />
+                <figcaption>Helicopter arrival</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-3.jpg" alt="Mark Anthony checking the microphone and headphones before the party starts" loading="lazy" />
+                <figcaption>The setup</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/ut-dallas-crowd.jpg" alt="A big crowd gathered at a UT Dallas event" loading="lazy" />
+                <figcaption>UT Dallas crowd</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-9.jpg" alt="Hula dancers in bright orange costumes posing at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/mark-anthony-laptop.jpg" alt="Mark Anthony mixing live from his laptop" loading="lazy" />
+                <figcaption>Live in the mix</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/gbp-6.jpg" alt="Close-up of DJ turntables and a mixer glowing under party lights" loading="lazy" />
+                <figcaption>On the decks</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-12.jpg" alt="Guests on the dance floor with a hula dancer at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/baskin-robbins-event.jpg" alt="An outdoor corporate promo event at a Baskin Robbins storefront with a balloon arch and the Flatline sound setup" loading="lazy" />
+                <figcaption>Corporate event</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-2.jpg" alt="The DJ mixer, turntables, and laptop set up and ready to play" loading="lazy" />
+                <figcaption>The setup</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/ut-dallas-dance.jpg" alt="Students on the dance floor at UT Dallas" loading="lazy" />
+                <figcaption>UT Dallas dance floor</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-7.jpg" alt="A fire performer twirling flames at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/gbp-7.jpg" alt="The Flatline DJ booth facade with illuminated red panels in a wood-paneled hall" loading="lazy" />
+                <figcaption>The booth</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/eaton-cheer-banquet.jpg" alt="A decorated chalkboard sign reading Welcome Eaton Cheer Banquet 2019" loading="lazy" />
+                <figcaption>Banquet</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-13.jpg" alt="Guests learning the moves from the hula dancers at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/halloween-party.jpg" alt="Guests in costume dancing at a Halloween party" loading="lazy" />
+                <figcaption>Halloween party</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/fb-14.jpg" alt="A guest dressed up and smiling at a New Year's Eve party" loading="lazy" />
+                <figcaption>New Year's Eve</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/user-5.jpg" alt="Mark Anthony and a guest smiling together at the DJ booth during the party" loading="lazy" style="object-position: center 30%;" />
+                <figcaption>The party</figcaption>
+              </figure>
+
+              <button type="button" class="slide-arrow prev" id="slide-prev" aria-label="Previous photo">&#8249;</button>
+              <button type="button" class="slide-arrow next" id="slide-next" aria-label="Next photo">&#8250;</button>
+            </div>
+            <div class="slide-dots" aria-label="Choose photo">
+                <button type="button" class="slide-dot" data-slide="0" aria-label="Show photo 1: Heath and Lanie Oakley" aria-current="true"></button>
+                <button type="button" class="slide-dot" data-slide="1" aria-label="Show photo 2: Wedding reception" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="2" aria-label="Show photo 3: Mark Anthony live" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="3" aria-label="Show photo 4: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="4" aria-label="Show photo 5: Wedding ceremony" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="5" aria-label="Show photo 6: Packing the dance floor" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="6" aria-label="Show photo 7: On the decks" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="7" aria-label="Show photo 8: Wedding reception" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="8" aria-label="Show photo 9: Wedding ceremony" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="9" aria-label="Show photo 10: Last dance" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="10" aria-label="Show photo 11: Mark Anthony live" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="11" aria-label="Show photo 12: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="12" aria-label="Show photo 13: Guerra Wedding" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="13" aria-label="Show photo 14: Wedding reception" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="14" aria-label="Show photo 15: The setup" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="15" aria-label="Show photo 16: House party" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="16" aria-label="Show photo 17: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="17" aria-label="Show photo 18: Mark Anthony" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="18" aria-label="Show photo 19: The setup" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="19" aria-label="Show photo 20: Danica and Chris" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="20" aria-label="Show photo 21: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="21" aria-label="Show photo 22: Event setup" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="22" aria-label="Show photo 23: Helicopter arrival" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="23" aria-label="Show photo 24: The setup" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="24" aria-label="Show photo 25: UT Dallas crowd" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="25" aria-label="Show photo 26: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="26" aria-label="Show photo 27: Live in the mix" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="27" aria-label="Show photo 28: On the decks" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="28" aria-label="Show photo 29: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="29" aria-label="Show photo 30: Corporate event" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="30" aria-label="Show photo 31: The setup" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="31" aria-label="Show photo 32: UT Dallas dance floor" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="32" aria-label="Show photo 33: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="33" aria-label="Show photo 34: The booth" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="34" aria-label="Show photo 35: Banquet" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="35" aria-label="Show photo 36: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="36" aria-label="Show photo 37: Halloween party" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="37" aria-label="Show photo 38: New Year's Eve" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="38" aria-label="Show photo 39: The party" aria-current="false"></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEOS -->
+      <section class="section" id="videos" aria-labelledby="videos-title">
+        <div class="wrap">
+          <p class="kicker">Press play</p>
+          <h2 class="title" id="videos-title">The floor, <em>in motion</em></h2>
+          <p class="intro">A few short clips from real Flatline nights, shot on phones right in the middle of it. This is what a full dance floor looks like.</p>
+
+          <div class="video-grid">
+            <figure class="video-card video-feature">
+              <div class="video-frame">
+                <video class="dance-video" controls playsinline preload="metadata" poster="assets/dance-floor-2-poster.jpg" aria-label="Video: couples dancing together on a packed floor at a Flatline event">
+                  <source src="assets/dance-floor-2.mp4" type="video/mp4" />
+                  Your browser cannot play this video, but picture a full dance floor and you have the idea.
+                </video>
+              </div>
+              <figcaption>A slow song, a full floor</figcaption>
+            </figure>
+
+            <div class="video-pair">
+              <figure class="video-card">
+                <div class="video-frame">
+                  <video class="dance-video portrait" controls playsinline preload="metadata" poster="assets/dance-floor-3-poster.jpg" aria-label="Video: a big crowd of students dancing at a UT Dallas event with the Flatline speakers up front">
+                    <source src="assets/dance-floor-3.mp4" type="video/mp4" />
+                    Your browser cannot play this video, but picture a whole room of students on their feet and you have the idea.
+                  </video>
+                </div>
+                <figcaption>The whole room at UT Dallas</figcaption>
+              </figure>
+              <figure class="video-card">
+                <div class="video-frame">
+                  <video class="dance-video portrait" controls playsinline preload="metadata" poster="assets/dance-floor-1-poster.jpg" aria-label="Video: a student dancing in front of a crowd at the University of Texas at Dallas">
+                    <source src="assets/dance-floor-1.mp4" type="video/mp4" />
+                    Your browser cannot play this video, but picture one dancer stealing the show and you have the idea.
+                  </video>
+                </div>
+                <figcaption>Stealing the show at UT Dallas</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXTRAS -->
+      <section class="section alt" id="extras">
+        <div class="wrap">
+          <p class="kicker">Standard with every event</p>
+          <h2 class="title">Sound &amp; lighting, <em>included</em></h2>
+          <p class="intro">No upsells and no add-on fees for the basics. Professional sound and lighting come standard with every Flatline event.</p>
+          <div class="extras-grid">
+            <div class="extra">
+              <h3>Ceremony microphones &amp; sound</h3>
+              <p>Every vow, reading, and toast comes through crisp and clear, indoors or out. No squeals, no straining to hear.</p>
+            </div>
+            <div class="extra">
+              <h3>Dancefloor lighting</h3>
+              <p>Lighting that turns a plain room into a party. Elegant while dinner is served, full color once the floor opens.</p>
+            </div>
+            <div class="extra">
+              <h3>Music during breaks</h3>
+              <p>The energy never dips. When the band rests or the program pauses, the music keeps the room right where you want it.</p>
+            </div>
+          </div>
+          <div class="price-note">
+            <span class="amt">Priced per event</span>
+            <p>Your price depends on the kind of event, how long it runs, your guest count, and your location. <a href="#book">Contact us</a> with your date and details, and we will give you exact pricing.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="wrap about-grid">
+          <div class="about-media">
+            <img src="assets/decks.webp" alt="Hands working a DJ mixer and turntable in front of soft party lights" />
+            <div class="duo" aria-hidden="true"></div>
+            <div class="badge"><b>Real2it</b><br />Mark Anthony, your DJ</div>
+          </div>
+          <div class="about-copy">
+            <p class="kicker">Meet your DJ</p>
+            <h2 class="title">Mark Anthony, <em>aka Real2it</em></h2>
+            <p>Mark Anthony has been in the music scene <strong>since 1999</strong>, and it shows in the transitions. One genre melts into the next so smoothly that the floor never gets a chance to empty. Country into classic rock, Motown into modern hits, cumbia into line dances. He reads the room and follows it.</p>
+            <p>Because here is the thing. <strong>It is not just about playing music.</strong> It is about making sure you and your guests have a great experience. Music sets the tone for the whole event, and Mark Anthony treats your night like it is the only one on the calendar.</p>
+            <p>By day, Mark Anthony works in the education sector as an administrator, and at home he is a family man first. He earned a doctorate degree along the way, though he would rather talk about your playlist than his credentials. By night, he is behind the decks.</p>
+            <ul class="about-points">
+              <li><span class="dot"></span><span><strong>One DJ, start to finish.</strong> The DJ you book is the DJ at your event.</span></li>
+              <li><span class="dot"></span><span><strong>Every age, every genre.</strong> If your guests love it, it is in the mix.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="section alt" id="reviews">
+        <div class="wrap">
+          <p class="kicker">The receipts</p>
+          <h2 class="title">Rated <em>five stars</em>, wherever you look</h2>
+          <p class="intro">Flatline's public booking profiles tell the story better than we could. Here is what they currently show.</p>
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="big">5.0<span class="of"> / 5</span></div>
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <h3>The Bash</h3>
+              <p>Five-star reviews from the couples and hosts who booked the party.</p>
+              <a class="btn ghost" href="https://www.thebash.com/mobile-dj/flatline-entertainment" target="_blank" rel="noopener">Read our reviews on The Bash</a>
+              <img class="bash-badge" src="assets/the-bash-best-of-2019.jpg" alt="The Bash Best of 2019 award badge for Flatline Entertainment" loading="lazy" />
+            </div>
+            <div class="review-card">
+              <div class="big">5.0<span class="of"> / 5</span></div>
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <h3>top-rated.online</h3>
+              <p>A perfect average, review after review.</p>
+              <a class="btn ghost" href="#book">Book the five-star version</a>
+            </div>
+          </div>
+          <h3 class="quotes-title">What clients say on Google</h3>
+          <div class="reviews-grid">
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>He was so kind and responsive... the dance floor was full all night!</blockquote>
+              <p class="reviewer">Emma G. <span class="role">&middot; wedding planner</span></p>
+            </div>
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>10/10 DJ!! ... made the dance floor CRAZY!</blockquote>
+              <p class="reviewer">Jessica N.</p>
+            </div>
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>The music and dancing were perfect and we had a blast.</blockquote>
+              <p class="reviewer">Gena N.</p>
+            </div>
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>The music mix was really good, the announcements and party animation were awesome. I totally recommend Flatline Entertainment!</blockquote>
+              <p class="reviewer">Eli G.</p>
+            </div>
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>Give this man a microphone and he brings the hype, no doubt!</blockquote>
+              <p class="reviewer">Jessica M.</p>
+            </div>
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>Amazing experience with DJ Mark Page! The music was perfect and the lights and overall entertainment were perfect.</blockquote>
+              <p class="reviewer">Abigail A.</p>
+            </div>
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>He was amazing, professional, and very detail oriented.</blockquote>
+              <p class="reviewer">Tiffany M.</p>
+            </div>
+            <div class="quote-card">
+              <div class="stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote>He knows his music and kept everyone on the dance floor.</blockquote>
+              <p class="reviewer">David G.</p>
+            </div>
+          </div>
+          <p class="reviews-link"><a class="btn ghost" href="https://share.google/bg9yFLrmuvEmFA9Kn" target="_blank" rel="noopener">Read all our Google reviews</a></p>
+          <p class="reviews-note">Review excerpts above are from Flatline Entertainment's Google reviews, trimmed for length. Ratings shown are the aggregate scores on Flatline Entertainment's public listings as of October 2026.</p>
+        </div>
+      </section>
+
+      <!-- AREA -->
+      <section class="section" id="area">
+        <div class="wrap area-grid">
+          <div>
+            <p class="kicker">Where we play</p>
+            <h2 class="title">Home base: <em>Dallas Fort Worth</em> and surrounding areas</h2>
+            <p class="intro">Wherever the party is, we bring it to you. From grand ballrooms to small country-town halls, we travel all across Dallas Fort Worth and surrounding areas.</p>
+          </div>
+          <div>
+            <p class="kicker">Good to know</p>
+            <h2 class="title" style="font-size: clamp(1.5rem, 3.4vw, 2rem);">Booking, minus the stress</h2>
+            <p class="intro" style="font-size: 1.05rem;">Dates go to whoever books first, and prime Saturdays move fast. To save your date, a deposit holds it for you, and that deposit is applied towards your event. Send your date through the form and we will confirm availability and talk through your venue and timeline.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING -->
+      <section class="section alt" id="book">
+        <div class="wrap">
+          <p class="kicker">Book Flatline</p>
+          <h2 class="title">Check <em>your date</em></h2>
+          <div class="book-grid">
+            <div>
+              <p class="intro">Tell us about the event and we will take it from there. Prefer to talk it through? Call or text us.</p>
+              <div class="call-card">
+                <div class="phone"><a href="tel:+14322025149">(432) 202-5149</a><span class="confirm-pill">Confirm before launch</span></div>
+                <p style="color: var(--muted); margin: .4rem 0 0;">That is the number on our current public listings, carried over here while this new site is finalized.</p>
+              </div>
+              <p style="color: var(--faint); font-size: .95rem; margin-top: 1.2rem;">You can also find and book Flatline Entertainment right now through our profile on The Bash, linked in the reviews section above.</p>
+            </div>
+            <div>
+              <form class="inquiry" id="inquiry-form" novalidate>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="f-name">Your name</label>
+                    <input id="f-name" name="name" type="text" autocomplete="name" required />
+                  </div>
+                  <div class="field">
+                    <label for="f-contact">Phone or email for our reply</label>
+                    <input id="f-contact" name="contact" type="text" autocomplete="email" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="f-date">Event date</label>
+                    <input id="f-date" name="date" type="date" required />
+                  </div>
+                  <div class="field">
+                    <label for="f-type">Type of event</label>
+                    <select id="f-type" name="type" required>
+                      <option value="">Choose one</option>
+                      <option>Wedding</option>
+                      <option>Quinceanera</option>
+                      <option>Sweet 16</option>
+                      <option>Prom or school dance</option>
+                      <option>Birthday party</option>
+                      <option>Corporate function</option>
+                      <option>Holiday party</option>
+                      <option>Other celebration</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="f-city">City or venue</label>
+                    <input id="f-city" name="city" type="text" placeholder="e.g. lakefront venue" />
+                  </div>
+                  <div class="field">
+                    <label for="f-guests">Estimated guests</label>
+                    <select id="f-guests" name="guests">
+                      <option value="">Not sure yet</option>
+                      <option>Under 50</option>
+                      <option>50 to 100</option>
+                      <option>100 to 200</option>
+                      <option>200 to 300</option>
+                      <option>300+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="f-notes">Anything we should know?</label>
+                  <textarea id="f-notes" name="notes" rows="3" placeholder="Must-play songs, the vibe you want, anything special you are picturing"></textarea>
+                  <p class="hint">Submitting builds your inquiry below so you can copy it or text it straight to us. Nothing is sent until you say so.</p>
+                </div>
+                <div>
+                  <button class="btn" type="submit">Build my inquiry</button>
+                </div>
+              </form>
+              <div class="inquiry-output" id="inquiry-output" aria-live="polite">
+                <h3>Your inquiry is ready</h3>
+                <pre id="inquiry-text"></pre>
+                <div class="output-actions">
+                  <button class="btn" type="button" id="copy-btn">Copy inquiry</button>
+                  <a class="btn ghost" id="sms-btn" href="#">Text it to Flatline</a>
+                  <span class="copy-ok" id="copy-ok" role="status"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap foot-row">
+        <div>
+          <a class="wordmark" href="#top" aria-label="Flatline Entertainment, home">
+            <img class="logo-img" src="assets/logo.png" alt="Flatline Entertainment" />
+          </a>
+          <p style="margin-top: 1rem;">Mobile DJ for weddings, parties, and events across Dallas Fort Worth and surrounding areas.</p>
+        </div>
+        <div>
+          <p class="social-label">Follow along</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.facebook.com/1331599183640611" target="_blank" rel="noopener" aria-label="FlatLine Entertainment on Facebook (opens in a new tab)">
+              <span class="social-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z" /></svg></span>
+              <span>Facebook</span>
+            </a>
+          </div>
+        </div>
+        <p>Event photography on this page is representative while our own gallery is being gathered. Ratings via The Bash and top-rated.online, October.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        "use strict";
+        var KEY = "flatline-color-scheme";
+        var valid = ["midnight", "neon", "velvet", "ultraviolet", "crimson", "emerald", "rose", "sapphire", "platinum", "sunset"];
+        var root = document.documentElement;
+        var buttons = Array.prototype.slice.call(document.querySelectorAll(".scheme-btn"));
+
+        function applyScheme(name, save) {
+          root.setAttribute("data-theme", name);
+          buttons.forEach(function (b) {
+            b.setAttribute("aria-pressed", b.getAttribute("data-scheme") === name ? "true" : "false");
+          });
+          if (save) { try { localStorage.setItem(KEY, name); } catch (e) {} }
+        }
+
+        // Color preview bar: hidden until the logo is tapped three times in a
+        // row (taps on any logo on the page count). Showing it restores the last
+        // previewed scheme; hiding it returns the page to Velvet Noir, which
+        // is what visitors always see.
+        var bar = document.getElementById("admin-bar");
+        var barToggle = document.getElementById("admin-bar-toggle");
+        if (bar && barToggle) {
+          barToggle.addEventListener("click", function () {
+            var collapsed = bar.classList.toggle("collapsed");
+            barToggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
+            barToggle.setAttribute("aria-label", collapsed ? "Expand color preview bar" : "Collapse color preview bar");
+          });
+        }
+        buttons.forEach(function (b) {
+          b.addEventListener("click", function () { applyScheme(b.getAttribute("data-scheme"), true); });
+        });
+
+        function setPreviewBar(open) {
+          if (!bar) return;
+          bar.hidden = !open;
+          if (open) {
+            var saved = null;
+            try { saved = localStorage.getItem(KEY); } catch (e) {}
+            applyScheme(valid.indexOf(saved) !== -1 ? saved : "velvet", false);
+          } else {
+            applyScheme("velvet", false);
+          }
+        }
+
+        var tapCount = 0;
+        var tapTimer = null;
+        Array.prototype.slice.call(document.querySelectorAll(".logo-img")).forEach(function (img) {
+          img.addEventListener("click", function (ev) {
+            tapCount += 1;
+            if (tapTimer) window.clearTimeout(tapTimer);
+            if (tapCount >= 3) {
+              tapCount = 0;
+              if (ev) ev.preventDefault();
+              setPreviewBar(bar ? bar.hidden : true);
+            } else {
+              tapTimer = window.setTimeout(function () { tapCount = 0; }, 800);
+            }
+          });
+        });
+
+        applyScheme("velvet", false);
+
+        // Duplicate marquee content once for a seamless loop.
+        var track = document.getElementById("marquee-track");
+        if (track) track.innerHTML += track.innerHTML;
+
+        // Photo slideshow: auto-advances, with arrows and dots for manual control.
+        var slideshow = document.getElementById("slideshow");
+        if (slideshow) {
+          var slides = Array.prototype.slice.call(slideshow.querySelectorAll(".slide"));
+          var dots = Array.prototype.slice.call(slideshow.querySelectorAll(".slide-dot"));
+          var prevBtn = document.getElementById("slide-prev");
+          var nextBtn = document.getElementById("slide-next");
+          var currentSlide = 0;
+          var slideTimer = null;
+          var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+          function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            slides.forEach(function (slide, i) {
+              slide.classList.toggle("active", i === currentSlide);
+            });
+            dots.forEach(function (dot, i) {
+              dot.setAttribute("aria-current", i === currentSlide ? "true" : "false");
+            });
+          }
+
+          function stopSlideshow() {
+            if (slideTimer) window.clearInterval(slideTimer);
+            slideTimer = null;
+          }
+
+          function startSlideshow() {
+            stopSlideshow();
+            if (!reduceMotion && !document.hidden) {
+              slideTimer = window.setInterval(function () { showSlide(currentSlide + 1); }, 5500);
+            }
+          }
+
+          function manualSlide(index) {
+            showSlide(index);
+            startSlideshow();
+          }
+
+          if (prevBtn) prevBtn.addEventListener("click", function () { manualSlide(currentSlide - 1); });
+          if (nextBtn) nextBtn.addEventListener("click", function () { manualSlide(currentSlide + 1); });
+          dots.forEach(function (dot) {
+            dot.addEventListener("click", function () {
+              manualSlide(Number(dot.getAttribute("data-slide")) || 0);
+            });
+          });
+          slideshow.addEventListener("mouseenter", stopSlideshow);
+          slideshow.addEventListener("mouseleave", startSlideshow);
+          slideshow.addEventListener("focusin", stopSlideshow);
+          slideshow.addEventListener("focusout", startSlideshow);
+          document.addEventListener("visibilitychange", function () {
+            if (document.hidden) stopSlideshow(); else startSlideshow();
+          });
+          showSlide(0);
+          startSlideshow();
+        }
+
+        // Dance-floor videos: only one plays at a time, so starting one
+        // pauses whichever clip is already running.
+        var danceVideos = Array.prototype.slice.call(document.querySelectorAll(".dance-video"));
+        danceVideos.forEach(function (vid) {
+          vid.addEventListener("play", function () {
+            danceVideos.forEach(function (other) {
+              if (other !== vid && !other.paused) other.pause();
+            });
+          });
+        });
+
+        // Booking inquiry builder.
+        var form = document.getElementById("inquiry-form");
+        var output = document.getElementById("inquiry-output");
+        var textEl = document.getElementById("inquiry-text");
+        var smsBtn = document.getElementById("sms-btn");
+        var copyBtn = document.getElementById("copy-btn");
+        var copyOk = document.getElementById("copy-ok");
+        var dateInput = document.getElementById("f-date");
+        if (dateInput) {
+          var today = new Date();
+          var iso = today.toISOString().split("T")[0];
+          dateInput.min = iso;
+        }
+
+        function fmtDate(v) {
+          if (!v) return "";
+          var parts = v.split("-");
+          var d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+          return d.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+        }
+
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          var name = document.getElementById("f-name").value.trim();
+          var contact = document.getElementById("f-contact").value.trim();
+          var date = dateInput.value;
+          var type = document.getElementById("f-type").value;
+          var city = document.getElementById("f-city").value.trim();
+          var guests = document.getElementById("f-guests").value;
+          var notes = document.getElementById("f-notes").value.trim();
+
+          if (!name || !contact || !date || !type) {
+            output.classList.add("show");
+            textEl.textContent = "Almost there. Please add your name, a phone or email, the event date, and the type of event, then build your inquiry again.";
+            smsBtn.style.display = "none";
+            copyBtn.style.display = "none";
+            output.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            return;
+          }
+          copyBtn.style.display = "";
+          smsBtn.style.display = "";
+
+          var lines = [
+            "Hi Flatline Entertainment! I would like to check a date.",
+            "",
+            "Name: " + name,
+            "Event: " + type,
+            "Date: " + fmtDate(date)
+          ];
+          if (city) lines.push("City or venue: " + city);
+          if (guests) lines.push("Estimated guests: " + guests);
+          if (notes) lines.push("Notes: " + notes);
+          lines.push("Reach me at: " + contact);
+
+          var msg = lines.join("\n");
+          textEl.textContent = msg;
+          copyOk.textContent = "";
+          smsBtn.href = "sms:+14322025149?&body=" + encodeURIComponent(msg);
+          output.classList.add("show");
+          output.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        });
+
+        copyBtn.addEventListener("click", function () {
+          var msg = textEl.textContent;
+          function done() { copyOk.textContent = "Copied. Paste it into a text or email to us anytime."; }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(msg).then(done, function () { fallback(); });
+          } else { fallback(); }
+          function fallback() {
+            var ta = document.createElement("textarea");
+            ta.value = msg; document.body.appendChild(ta); ta.select();
+            try { document.execCommand("copy"); done(); }
+            catch (e) { copyOk.textContent = "Copy did not work here. Long-press the text above to copy it."; }
+            document.body.removeChild(ta);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
