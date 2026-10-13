@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
-    <meta name="description" content="Flatline Entertainment is a mobile DJ service serving Dallas Fort Worth and surrounding areas. Weddings, quinceaneras, proms, corporate events, and parties." />
+    <meta name="description" content="Flatline Entertainment is a mobile DJ service serving Dallas, Fort Worth and surrounding areas. Weddings, quinceaneras, proms, corporate events, and parties." />
     <link rel="icon" href="data:," />
-    <title>Flatline Entertainment | Mobile DJ for Weddings, Parties &amp; Events in Dallas Fort Worth and Surrounding Areas</title>
+    <title>Flatline Entertainment | Mobile DJ for Weddings, Parties &amp; Events in Dallas, Fort Worth and Surrounding Areas</title>
     <script>
       // The page always loads in Velvet Noir (data-theme on <html>). The color
       // preview bar stays hidden until the logo is tapped three times in a row;
@@ -222,7 +222,7 @@
       }
       @keyframes pulse-draw { 0% { stroke-dashoffset: 620; } 55% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -620; } }
 
-      .stats { border-top: 1px solid var(--line-soft); margin-top: 3rem; padding-top: 1.4rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+      .stats { border-top: 1px solid var(--line-soft); margin-top: 3rem; padding-top: 1.4rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; text-align: center; }
       .stat .stat-num { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.3rem); color: var(--accent-2); line-height: 1.1; }
       .stat .stat-label { font-size: .9rem; color: var(--muted); margin-top: .15rem; }
       .stars { color: var(--accent); letter-spacing: .12em; font-size: .95rem; }
@@ -238,7 +238,7 @@
       .kicker { letter-spacing: .3em; text-transform: uppercase; font-size: .8rem; color: var(--accent); margin: 0 0 .5rem; text-align: center; }
       h2.title { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.08; margin: 0 0 .8rem; text-align: center; }
       h2.title em { font-style: italic; color: var(--accent); }
-      .intro { color: var(--muted); max-width: 44rem; font-size: 1.12rem; }
+      .intro { color: var(--muted); max-width: 44rem; font-size: 1.12rem; text-align: center; margin-inline: auto; }
 
       /* ============ SERVICES ============ */
       .service { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(1.6rem, 4vw, 3.5rem); align-items: center; padding: clamp(1.8rem, 4vw, 2.8rem) 0; border-bottom: 1px solid var(--line-soft); }
@@ -247,10 +247,11 @@
       .svc-media { border-radius: 6px; overflow: hidden; position: relative; }
       .svc-media::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px var(--line-soft); border-radius: 6px; pointer-events: none; }
       .svc-media img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; aspect-ratio: 4 / 3; }
-      .svc-num { font-family: "Playfair Display", Georgia, serif; font-style: italic; color: var(--faint); font-size: 1rem; }
+      .svc-body { text-align: center; }
+      .svc-num { font-family: "Playfair Display", Georgia, serif; font-style: italic; color: var(--faint); font-size: 1rem; display: block; }
       .svc-body h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.2rem); margin: .2rem 0 .5rem; line-height: 1.15; text-align: center; }
-      .svc-body p { color: var(--muted); margin: 0 0 1rem; }
-      .chip-row { display: flex; flex-wrap: wrap; gap: .45rem; }
+      .svc-body p { color: var(--muted); margin: 0 0 1rem; text-align: center; }
+      .chip-row { display: flex; flex-wrap: wrap; gap: .45rem; justify-content: center; }
       .chip { font-size: .88rem; border: 1px solid var(--line); color: var(--accent-2); border-radius: 999px; padding: .22rem .75rem; }
 
       /* Community (last of #events) flows straight into the slideshow:
@@ -329,10 +330,10 @@
       .extras-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 3vw, 2.2rem); margin-top: 2.2rem; }
       .extra { border-top: 2px solid var(--accent); padding-top: 1rem; }
       .extra h3 { font-family: "Playfair Display", Georgia, serif; font-size: 1.35rem; margin: 0 0 .4rem; text-align: center; }
-      .extra p { color: var(--muted); margin: 0; font-size: 1.02rem; }
-      .price-note { margin-top: 2.4rem; display: flex; gap: 1rem; align-items: baseline; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 6px; padding: 1.1rem 1.4rem; background: var(--surface); }
+      .extra p { color: var(--muted); margin: 0; font-size: 1.02rem; text-align: center; }
+      .price-note { margin-top: 2.4rem; display: flex; gap: 1rem; align-items: baseline; flex-wrap: wrap; justify-content: center; border: 1px solid var(--line); border-radius: 6px; padding: 1.1rem 1.4rem; background: var(--surface); }
       .price-note .amt { font-family: "Playfair Display", Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--accent-2); }
-      .price-note p { margin: 0; color: var(--muted); }
+      .price-note p { margin: 0; color: var(--muted); text-align: center; }
 
       /* ============ ABOUT ============ */
       .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: center; }
@@ -344,27 +345,27 @@
         border: 1px solid var(--line); border-radius: 6px; padding: .5rem .9rem; font-size: .95rem;
       }
       .about-media .badge b { color: var(--accent-2); font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; }
-      .about-copy p { color: var(--muted); }
+      .about-copy p { color: var(--muted); text-align: center; }
       .about-copy p strong { color: var(--ink); font-weight: 600; }
       .about-points { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; gap: .7rem; }
-      .about-points li { display: flex; gap: .7rem; align-items: baseline; }
+      .about-points li { display: flex; gap: .7rem; align-items: baseline; justify-content: center; text-align: center; }
       .about-points .dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); flex: none; transform: translateY(-2px); }
 
       /* ============ REVIEWS ============ */
       .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1.2rem, 3vw, 2rem); margin-top: 2rem; }
-      .review-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.6rem 1.7rem; }
+      .review-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.6rem 1.7rem; text-align: center; }
       .review-card .big { font-family: "Playfair Display", Georgia, serif; font-weight: 900; font-size: 3.2rem; line-height: 1; color: var(--ink); }
       .review-card .of { color: var(--muted); font-size: 1rem; }
       .review-card h3 { margin: .4rem 0 .3rem; font-size: 1.05rem; letter-spacing: .06em; text-align: center; }
       .review-card p { color: var(--muted); margin: 0 0 1rem; }
       .quotes-title { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.4rem, 3vw, 1.8rem); margin: 2.8rem 0 .4rem; text-align: center; }
-      .quote-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.4rem 1.5rem; }
+      .quote-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.4rem 1.5rem; text-align: center; }
       .quote-card .stars { margin-bottom: .55rem; }
       .quote-card blockquote { margin: 0 0 .8rem; color: var(--ink); font-size: 1.06rem; line-height: 1.55; }
       .quote-card .reviewer { color: var(--accent-2); font-weight: 600; letter-spacing: .03em; font-size: .95rem; margin: 0; }
       .quote-card .reviewer .role { color: var(--muted); font-weight: 400; }
-      .reviews-note { color: var(--faint); font-size: .95rem; margin: 1.2rem 0 0; max-width: 46rem; }
-      .reviews-link { margin: 1.4rem 0 0; }
+      .reviews-note { color: var(--faint); font-size: .95rem; margin: 1.2rem auto 0; max-width: 46rem; text-align: center; }
+      .reviews-link { margin: 1.4rem 0 0; text-align: center; }
       .bash-badge { width: 118px; height: auto; margin: 1.1rem auto 0; border-radius: 6px; }
       #reviews { padding-bottom: clamp(1.4rem, 3.5vw, 2.2rem); }
 
@@ -376,25 +377,27 @@
       /* ============ BOOKING ============ */
       .book-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: start; }
       .call-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 6px; padding: 1.5rem 1.6rem; margin-top: 1.4rem; }
+      .call-card { text-align: center; }
       .call-card .phone { font-family: "Playfair Display", Georgia, serif; font-size: 1.9rem; font-weight: 700; }
       .call-card .phone a { color: var(--ink); text-decoration: none; }
       .call-card .phone a:hover { color: var(--accent-2); }
       .confirm-pill { display: inline-block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; border: 1px dashed var(--accent); color: var(--accent-2); border-radius: 999px; padding: .15rem .6rem; margin-left: .5rem; vertical-align: middle; }
-      form.inquiry { display: grid; gap: 1rem; }
-      .field label { display: block; font-size: .92rem; letter-spacing: .05em; color: var(--accent-2); margin-bottom: .35rem; }
+      form.inquiry { display: grid; gap: 1rem; text-align: center; }
+      .field label { display: block; font-size: .92rem; letter-spacing: .05em; color: var(--accent-2); margin-bottom: .35rem; text-align: center; }
       .field input, .field select, .field textarea {
         width: 100%; background: var(--surface); color: var(--ink);
         border: 1px solid var(--line-soft); border-radius: 6px;
         padding: .7rem .85rem; font: inherit; font-size: 1rem;
       }
       .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
-      .field .hint { font-size: .85rem; color: var(--faint); margin-top: .3rem; }
+      .field .hint { font-size: .85rem; color: var(--faint); margin-top: .3rem; text-align: center; }
+      .field input, .field select, .field textarea { text-align: center; }
       .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
       .inquiry-output { display: none; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1.2rem 1.4rem; margin-top: 1.2rem; }
       .inquiry-output.show { display: block; }
       .inquiry-output h3 { margin: 0 0 .5rem; font-family: "Playfair Display", Georgia, serif; text-align: center; }
-      .inquiry-output pre { white-space: pre-wrap; font-family: inherit; font-size: .98rem; color: var(--muted); margin: 0 0 1rem; }
-      .output-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+      .inquiry-output pre { white-space: pre-wrap; font-family: inherit; font-size: .98rem; color: var(--muted); margin: 0 0 1rem; text-align: center; }
+      .output-actions { display: flex; gap: .7rem; flex-wrap: wrap; justify-content: center; }
       .copy-ok { color: var(--accent-2); font-size: .92rem; align-self: center; }
 
       /* ============ SOCIAL ============ */
@@ -418,8 +421,10 @@
       .social-block { margin-top: 1.4rem; }
 
       footer.site { border-top: 1px solid var(--line-soft); padding: 2.4rem 0 2.8rem; background: var(--bg-2); }
-      footer.site .foot-row { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; align-items: start; }
-      footer.site p { color: var(--faint); font-size: .92rem; max-width: 34rem; }
+      footer.site .foot-row { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; align-items: start; text-align: center; }
+      footer.site p { color: var(--faint); font-size: .92rem; max-width: 34rem; margin-inline: auto; text-align: center; }
+      footer.site .social-links { justify-content: center; }
+      footer.site .social-label { text-align: center; }
 
       @media (max-width: 860px) {
         .stats { grid-template-columns: repeat(2, 1fr); }
@@ -485,7 +490,7 @@
       </div>
     </div>
 
-    <div class="where-strip"><p>Dallas Fort Worth and surrounding areas</p></div>
+    <div class="where-strip"><p>Dallas, Fort Worth and surrounding areas</p></div>
 
     <!-- Logo banner: the approved artwork stretched across the top at its natural
          proportions, recolored to match the active scheme. Triple-tap it to
@@ -995,8 +1000,8 @@
         <div class="wrap area-grid">
           <div>
             <p class="kicker">Where we play</p>
-            <h2 class="title">Home base: <em>Dallas Fort Worth</em> and surrounding areas</h2>
-            <p class="intro">Wherever the party is, we bring it to you. From grand ballrooms to small country-town halls, we travel all across Dallas Fort Worth and surrounding areas.</p>
+            <h2 class="title">Home base: <em>Dallas, Fort Worth</em> and surrounding areas</h2>
+            <p class="intro">Wherever the party is, we bring it to you. From grand ballrooms to small country-town halls, we travel all across Dallas, Fort Worth and surrounding areas.</p>
           </div>
           <div>
             <p class="kicker">Good to know</p>
@@ -1018,7 +1023,6 @@
                 <div class="phone"><a href="tel:+14322025149">(432) 202-5149</a><span class="confirm-pill">Confirm before launch</span></div>
                 <p style="color: var(--muted); margin: .4rem 0 0;">That is the number on our current public listings, carried over here while this new site is finalized.</p>
               </div>
-              <p style="color: var(--faint); font-size: .95rem; margin-top: 1.2rem;">You can also find and book Flatline Entertainment right now through our profile on The Bash, linked in the reviews section above.</p>
             </div>
             <div>
               <form class="inquiry" id="inquiry-form" novalidate>
@@ -1099,7 +1103,7 @@
           <a class="wordmark" href="#top" aria-label="Flatline Entertainment, home">
             <img class="logo-img" src="assets/logo.png" alt="Flatline Entertainment" />
           </a>
-          <p style="margin-top: 1rem;">Mobile DJ for weddings, parties, and events across Dallas Fort Worth and surrounding areas.</p>
+          <p style="margin-top: 1rem;">Mobile DJ for weddings, parties, and events.</p>
         </div>
         <div>
           <p class="social-label">Follow along</p>
@@ -1110,7 +1114,7 @@
             </a>
           </div>
         </div>
-        <p>Event photography on this page is representative while our own gallery is being gathered. Ratings via The Bash and top-rated.online, October.</p>
+        <p>Ratings via The Bash and top-rated.online, October 2026.</p>
       </div>
     </footer>
 
