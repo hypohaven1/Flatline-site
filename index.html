@@ -775,8 +775,8 @@
                 <figcaption>Halloween party</figcaption>
               </figure>
               <figure class="slide">
-                <img src="assets/fb-14.jpg" alt="Liisa and Adam with a guest at their wedding, smiling" loading="lazy" />
-                <figcaption>Liisa and Adam</figcaption>
+                <img src="assets/fb-14.jpg" alt="Lisa and Adam with a guest at their wedding, smiling" loading="lazy" />
+                <figcaption>Lisa and Adam</figcaption>
               </figure>
               <figure class="slide">
                 <img src="assets/user-5.jpg" alt="Mark Anthony and a guest smiling together at the DJ booth during the party" loading="lazy" style="object-position: center 30%;" />
@@ -824,7 +824,7 @@
                 <button type="button" class="slide-dot" data-slide="34" aria-label="Show photo 35: Banquet" aria-current="false"></button>
                 <button type="button" class="slide-dot" data-slide="35" aria-label="Show photo 36: Birthday party" aria-current="false"></button>
                 <button type="button" class="slide-dot" data-slide="36" aria-label="Show photo 37: Halloween party" aria-current="false"></button>
-                <button type="button" class="slide-dot" data-slide="37" aria-label="Show photo 38: Liisa and Adam" aria-current="false"></button>
+                <button type="button" class="slide-dot" data-slide="37" aria-label="Show photo 38: Lisa and Adam" aria-current="false"></button>
                 <button type="button" class="slide-dot" data-slide="38" aria-label="Show photo 39: The party" aria-current="false"></button>
             </div>
           </div>
@@ -1327,6 +1327,24 @@
             document.body.removeChild(ta);
           }
         });
+      })();
+    </script>
+    <script>
+      // Silent visit counter: fires one background request per page load
+      // and renders nothing on the page.
+      (function () {
+        try {
+          fetch('https://abacus.jasoncameron.dev/hit/flatline/site-visits', {
+            mode: 'no-cors',
+            keepalive: true,
+            credentials: 'omit'
+          }).catch(function () {});
+        } catch (e) {
+          try {
+            var beacon = new Image();
+            beacon.src = 'https://abacus.jasoncameron.dev/hit/flatline/site-visits';
+          } catch (ignored) {}
+        }
       })();
     </script>
   </body>
